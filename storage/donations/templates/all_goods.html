@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+catalog
+{% endblock %}
+
+{% block content %}
+
+<h1>все товары</h1>
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">name</th>
+      <th scope="col">coast</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for good in goods%}
+    <tr>
+
+      <td>{{good.name}}</td>
+      <td>{{good.coast}}</td>
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
